@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.6.5'
+}
+
+group 'com.example'
+version '1.1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/central/'}
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    maven { url 'https://maven.aliyun.com/repository/google/' }
+    maven { url 'https://maven.aliyun.com/repository/jcenter/'}
+    maven { url 'https://maven.aliyun.com/repository/gradle-plugin'}
+    maven { url 'https://jitpack.io' }
+    //    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.github.juliuss:urlplus:9150d53b86'
+    implementation 'org.projectlombok:lombok:1.18.22'
+    implementation group: 'cn.hutool', name: 'hutool-core', version: '5.8.11'
+}
+
+intellij {
+    version '2020.2.3'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+patchPluginXml {
+    sinceBuild = '202.60'
+    untilBuild = ''
+    changeNotes """
+<ol>
+<li>支持JCEF (support JCEF)</li>
+<li>修复部分bug (fix some bugs)</li>
+</ol>
+      """
+}

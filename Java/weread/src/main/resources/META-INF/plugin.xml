@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>com.example.weread</id>
+    <name>WeRead</name>
+    <vendor email="349463154@qq.com" url="https://github.com/">WeRead</vendor>
+
+    <description><![CDATA[
+      <b>WeRead plugin for idea</b><br/>
+      <p>A plugin for use idea to use WeRead.</p>
+     <img width="400" height="263" src="https://cdn.jsdelivr.net/gh/starxg/webbrowserforidea@master/images/1.png" alt="Introduce Image" />
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Weread" anchor="right" factoryClass="com.example.BrowserWindowFactory"/>
+    </extensions>
+
+    <application-components>
+        <!-- Add your application components here -->
+
+    </application-components>
+
+    <actions>
+        <!-- Add your actions here -->
+
+    </actions>
+
+
+</idea-plugin>
